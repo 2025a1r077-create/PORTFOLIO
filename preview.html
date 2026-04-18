@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikhil Verma | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e2e8f0;
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #38bdf8;
+}
+
+header p {
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(56,189,248,0.2);
+}
+
+ul li {
+    margin: 8px 0;
+}
+
+a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.7;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Nikhil Verma</h1>
+    <p>B.Tech Computer Science | Aspiring Software Developer</p>
+    <p>📞 8082950339 | ✉️ 2025a1r0772@mietjammu.in</p>
+</header>
+
+<section class="hidden">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+        I'm a Computer Science student passionate about building real-world applications and solving problems through code.
+        </p>
+        <p>
+        I aim to become a full-stack developer and continuously improve by working on projects and learning modern technologies.
+        </p>
+    </div>
+</section>
+
+<section class="hidden">
+    <h2>Education</h2>
+    <div class="card">
+        <p><strong>B.Tech Computer Science</strong></p>
+        <p>MIET Jammu</p>
+        <p>Batch: 2025 – 2029</p>
+        <p>CGPA: 8.2</p>
+    </div>
+
+    <div class="card">
+        <p><strong>Class XII – CBSE</strong></p>
+        <p>Percentage: 89.4%</p>
+    </div>
+</section>
+
+<section class="hidden">
+    <h2>Skills</h2>
+    <div class="card">
+        <ul>
+            <li>C, C++, Python, Java</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>MySQL, MongoDB</li>
+            <li>Git, GitHub, Linux</li>
+        </ul>
+    </div>
+</section>
+
+<section class="hidden">
+    <h2>Projects</h2>
+    <div class="card"><h3>Student Management System</h3></div>
+    <div class="card"><h3>Portfolio Website</h3></div>
+    <div class="card"><h3>TaskFlow App</h3></div>
+    <div class="card"><h3>QuickChat</h3></div>
+</section>
+
+<section class="hidden">
+    <h2>Achievements</h2>
+    <div class="card">
+        <ul>
+            <li>🏆 Coding Competition Winner</li>
+            <li>📜 Java Certification</li>
+            <li>💻 Hackathon Participation</li>
+        </ul>
+    </div>
+</section>
+
+<section class="hidden">
+    <h2>Hobbies</h2>
+    <div class="card">
+        <ul>
+            <li>Coding</li>
+            <li>Chess</li>
+            <li>Tech Blogging</li>
+            <li>Music</li>
+        </ul>
+    </div>
+</section>
+
+<section class="hidden">
+    <h2>Contact</h2>
+    <div class="card">
+        <p>📞 8082950339</p>
+        <p>✉️ 2025a1r0772@mietjammu.in</p>
+        <p>🔗 <a href="https://www.linkedin.com/in/nikhil-verma-8a1309398" target="_blank">LinkedIn Profile</a></p>
+        <p>💻 <a href="https://github.com/2025a1r077-create" target="_blank">GitHub Profile</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Nikhil Verma</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
